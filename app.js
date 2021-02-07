@@ -1,11 +1,9 @@
 const express = require('express');
-require('dotenv').config();
 
-const google_maps_api_key = process.env.GOOGLE_MAPS_API_KEY;
+const { port } = require('./src/config');
 
 // Import express module: routing HTTP requests, configuring middleware, rendering HTML views, registering a template engine, modifying app settings
 const app = express();
-const port = process.env.PORT || 3000;
 
 app.use(express.static('public'));
 

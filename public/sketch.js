@@ -1,4 +1,3 @@
-
 google.charts.load('current', {
     'packages':['geochart'],
     'mapsApiKey': 'AIzaSyBdyguiJCHnuYwggUusE7ipwA7bK0MhWRc'
