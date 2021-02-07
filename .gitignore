@@ -1,0 +1,8 @@
+# Ignore environment file 
+.env
+
+# Ignore Webstorm IDE
+.idea
+
+# Ignore node_modules (every information is in package.json)
+node_modules
