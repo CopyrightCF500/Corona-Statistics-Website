@@ -12,3 +12,24 @@ module.exports = {
     port: process.env.PORT,
     google_maps_api_key: process.env.GOOGLE_MAPS_API_KEY
 };
+
+
+
+
+
+
+
+/* const {
+    NODE_ENV,
+    DB_DB,
+    DB_HOST,
+    DB_PORT,
+    USERNAME,
+    PASSWORD,
+    JWT_SECRET,
+    SMTP_HOST,
+    SMTP_PORT,
+    EMAIL_FROM,
+    EMAIL_ADDRESS,
+    EMAIL_PASSWORD,
+  } = process.env; */
