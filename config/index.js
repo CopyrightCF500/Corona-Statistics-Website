@@ -8,9 +8,16 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
+if (dotenv.error) {
+    // This error should crash whole process
+    throw new Error("⚠️  Couldn't find .env file  ⚠️");
+  }
+
 module.exports = {
-    port: process.env.PORT,
-    google_maps_api_key: process.env.GOOGLE_MAPS_API_KEY
+    PORT: process.env.PORT,
+    GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY,
+    MONGODB_ATLAS_USER_NAME: process.env.MONGODB_ATLAS_USER_NAME,
+    MONGODB_ATLAS_PASSWORD: process.env.MONGODB_ATLAS_PASSWORD
 };
 
 
