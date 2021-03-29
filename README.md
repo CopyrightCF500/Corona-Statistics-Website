@@ -19,5 +19,3 @@ docker build -t alex/node-web-app .
 
 Run command:
 docker run -p 9999:8080 -v /home/alex/AlexWebsite/Corona-Statistics-Website:/usr/src/app -d alex/node-web-app
-
-Test123
