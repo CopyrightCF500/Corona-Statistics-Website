@@ -12,6 +12,25 @@ class CoronaApiService{
     }
 
     /**
+     * @description Attempt to fetch state Statistics of the RKI Corona API of today
+     * @returns {Promise<{success: boolean, error: *}|{success: boolean, body: *}>}
+     */
+    async getDailyStateStats(){
+        try{
+            await axios.get(this.rootEndpoint+this.stateEndpoint)
+                    .then(async (response) => {
+                        //console.log(response.data);
+                        return { success: true, body: response.data};
+                    });
+            
+        } catch(err){
+            console.log('error get daily stats in APIService');
+            console.log(err);
+            return {success: false, error: err};
+        }
+    }
+
+    /**
      * @description Attempt to fetch state Statistics of the RKI Corona API
      * @returns {Promise<{success: boolean, error: *}|{success: boolean, body: *}>}
      */
@@ -49,7 +68,7 @@ class CoronaApiService{
             else{
                 const state = new State({
                     name: data.BW.name,
-                    date: meta.lastUpdate,
+                    date: new Date(meta.lastUpdate),
                     weekIncidence: data.BW.weekIncidence
                 });
 

@@ -45,6 +45,7 @@
             body: 'body-test'
         };
         const response = fetch('/stats', options);
+        console.log("Test");
         console.log(response);
 
         google.charts.load('current', {
@@ -54,6 +55,7 @@
         google.charts.setOnLoadCallback(drawVisualization);
 
         var statesData = '<%= data.weekIncidence%>'
+        console.log("BAUM");
         console.log(statesData);
 
         function drawVisualization() {
